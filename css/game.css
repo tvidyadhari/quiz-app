@@ -1,0 +1,114 @@
+.container {
+    height: 100vh;
+	font-family: var(--ff-option);
+}
+
+/* card */
+.question-card {
+    /* width: max-content; */
+    max-width: 400px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* display */
+.display {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1px;
+}
+.display h1 {
+    font-family: var(--ff-question);
+    font-size: 2.5rem;
+}
+.display span {
+    font-size: 1rem;
+    opacity: 0.75;
+}
+#correct-counter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+/* time progress */
+.timer {
+    height: 5px;
+    background: var(--clr-blue);
+}
+.animate-timer {
+	animation: fill 5s linear 1;
+}
+@keyframes fill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* question */
+.question {
+    font-family: var(--ff-question);
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    padding: 1em 1em;
+    text-align: center;
+}
+
+/* options */
+.options {
+    font-family: var(--ff-alt);
+    background-color: var(--clr-light);
+    color: #333;
+    padding: 1em 0.5em;
+    box-shadow: 0px 12px 24px rgba(2, 30, 84, 0.1);
+}
+.option {
+    display: flex;
+    /* padding: 1em 1em; */
+    align-items: center;
+    border: 1px solid #adadad;
+    border-radius: 99em;
+    margin: 1em;
+}
+.option-prefix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--clr-dark);
+    border-radius: 50%;
+    width: 2em;
+    height: 1.8em;
+    margin-left: 1em;
+}
+.option-text {
+    width: 100%;
+    padding-left: 1em;
+    letter-spacing: 1px;
+    padding: 1em 1em;
+    cursor: pointer;
+}
+
+/* for small screens */
+@media (max-width: 400px) {
+    :root {
+        font-size: 12px;
+    }
+    .question-card,
+    .display {
+        width: 300px;
+    }
+}
+.correct {
+    background: #49b675;
+}
+.wrong {
+    background: #c4342d;
+    color: var(--clr-light);
+}
+

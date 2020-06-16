@@ -1,0 +1,93 @@
+:root {
+	font-size: 16px;
+	--clr-bg: #daf2ff;
+	--clr-dark: #333;
+	--clr-light: #fefefa;
+	--clr-green: #00c6ab;
+	--clr-blue: #2196f5;
+
+	--ff-question:'Roboto Condensed', sans-serif;
+	--ff-option: 'Roboto', sans-serif;
+	--ff-alt:'Work Sans', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--clr-bg);
+	font-family: var(--ff-alt);
+	color: var(--clr-dark);
+	height: 80vh;
+	overflow: scroll;
+}
+
+.container {
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#game-title {
+	text-shadow: 3px 5px rgba(0,0,0,0.25);
+	font-size: 6rem;
+	transform:rotate(-6deg);
+	background: var(--clr-green);
+	padding: .1em .25em .2em .25em;
+	text-align: center;
+	margin: .5em;
+	cursor: default;
+}
+#game-title:hover {
+	/* transform: scale(1.25); */
+	animation: spin .5s ease-in-out 1;
+}
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.button {
+	text-transform: lowercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	color: inherit;
+	background: #2196f5;
+	font-size: 1.5rem;
+	padding: .5em 1.5em;
+	cursor: pointer;
+}
+.button:hover {
+	transform: scale(1.1);
+}
+
+/* loader */
+/* reference: https://www.w3schools.com/howto/howto_css_loader.asp */
+.loader {
+	width: 4rem;
+    height: 4rem;
+    border: .75rem solid var(--clr-light); /* Light grey */
+    border-top: .75rem solid var(--clr-green); /* Blue */
+    border-radius: 50%;
+	animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.hidden {
+    display: none;
+}

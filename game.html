@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>quizze</title>
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap"
+		rel="stylesheet">
+	<!-- stylesheets -->
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/game.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="loader">
+
+		</div>
+		<div class="game hidden">
+			<div class="display">
+				<h1 id="current-question">Question 1<span id="total">/ 10</span></h1>
+			</div>
+	
+			<div class="question-card">
+				<div class="timer"></div>
+				<h1 class="question">
+					
+				</h1>
+				<div class="options">
+					<div class="option">
+						<p class="option-prefix">A</p>
+						<p class="option-text"></p>
+					</div>
+					<div class="option">
+						<p class="option-prefix">B</p>
+						<p class="option-text"></p>
+					</div>
+					<div class="option">
+						<p class="option-prefix">C</p>
+						<p class="option-text"></p>
+					</div>
+					<div class="option">
+						<p class="option-prefix">D</p>
+						<p class="option-text"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<!-- scripts -->
+	<script src="./scripts/game.js"></script>
+</body>
+
+</html>
